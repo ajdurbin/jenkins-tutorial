@@ -20,8 +20,7 @@ pipeline {
             }
             steps {
                 sh 'python -m pip install -r src/requirements.txt'
-                sh 'py.test --verbose --junit-xml test-reports/results.xml
-                src/test_calc.py'
+                sh 'py.test --verbose --junit-xml test-reports/results.xml src/test_calc.py'
             }
             post {
                 always {
